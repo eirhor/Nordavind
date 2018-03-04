@@ -1,0 +1,118 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('../Core/Fonts/icomoon.woff') format('woff')
+}
+
+i, .icon {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon {
+  &:before {
+    color: map_get($colors, black);
+  }
+  &--home:before {
+    content: "\e900";
+  }
+  &--phone:before {
+    content: "\e942";
+  }
+  &--envelop:before {
+    content: "\e945";
+  }
+  &--location:before {
+    content: "\e948";
+  }
+  &--download:before {
+    content: "\e9c5";
+  }
+  &--star-full:before {
+    content: "\e9d9";
+  }
+  &--heart:before {
+    content: "\e9da";
+  }
+  &--warning:before {
+    content: "\ea07";
+  }
+  &--notification:before {
+    content: "\ea08";
+  }
+  &--plus:before {
+    content: "\ea0a";
+  }
+  &--minus:before {
+    content: "\ea0b";
+  }
+  &--info:before {
+    content: "\ea0c";
+  }
+  &--cancel-circle:before {
+    content: "\ea0d";
+  }
+  &--share:before {
+    content: "\ea82";
+  }
+  &--google-plus:before {
+    content: "\ea8b";
+  }
+  &--facebook:before {
+    content: "\ea90";
+  }
+  &--instagram:before {
+    content: "\ea92";
+  }
+  &--twitter:before {
+    content: "\ea96";
+  }
+  &--youtube:before {
+    content: "\ea9d";
+  }
+  &--twitch:before {
+    content: "\ea9f";
+  }
+  &--steam:before {
+    content: "\eaac";
+  }
+  &--github:before {
+    content: "\eab0";
+  }
+  &--npm:before {
+    content: "\eab1";
+  }
+  &--tumblr:before {
+    content: "\eaba";
+  }
+  &--skype:before {
+    content: "\eac5";
+  }
+  &--reddit:before {
+    content: "\eac6";
+  }
+  &--linkedin:before {
+    content: "\eaca";
+  }
+  &--pinterest:before {
+    content: "\ead2";
+  }
+  &--document:before {
+    content: "\eae3";
+  }
+  &--black:before {
+    color: map_get($colors, black);
+  }
+  &--blue:before {
+    color: map_get($colors, blue);
+  }
+  &--white:before {
+    color: map_get($colors, white);
+  }
+}
