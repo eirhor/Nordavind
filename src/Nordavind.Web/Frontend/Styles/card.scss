@@ -31,7 +31,7 @@ $cardHeight: 380px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
-    border-top: 2px solid rgba(map_get($colors, white), 0.5);
+    border-top: 2px solid rgba(map_get($colors, black), 0.5);
   }
 
   &__interaction {
