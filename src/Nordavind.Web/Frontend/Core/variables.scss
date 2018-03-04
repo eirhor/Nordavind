@@ -1,0 +1,38 @@
+$colors: (
+  black: #000000,
+  blue: #5b89b4,
+  white: #f4f3f2,
+);
+
+$breakpoints: (
+  small: 640,
+  medium: 980,
+  large: 1280,
+);
+
+$spacing: (
+  tiny: 0.3,
+  small: 0.6,
+  medium: 1.2,
+  large: 2.4,
+  huge: 3.6,
+);
+
+$sizes: (
+  tiny: 0.6,
+  small: 0.8,
+  medium: 1,
+  large: 1.6,
+  huge: 2.4,
+  gigantic: 3,
+);
+
+$aspects: (
+  banner: 0.25,
+  wide: 0.5,
+  landscape: 0.6,
+  square: 1,
+  portrait: 1.3,
+  tall: 2,
+  skyscraper: 4,
+);

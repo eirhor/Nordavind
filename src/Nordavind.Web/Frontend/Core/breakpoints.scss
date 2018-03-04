@@ -1,0 +1,28 @@
+@import "variables";
+
+$scopes: (
+  only: 0,
+  up: 1,
+  down: 2,
+);
+
+@mixin breakpoint($point, $scope: map_get($scopes, up)) {
+  $prev-value: 0;
+
+  @each $name, $value in $breakpoints {
+    @if $point == $name {
+      @if $scope == map_get($scopes, only) {
+        @media only screen and (min-width: ($prev-value)px) and (max-width: ($value)px) { @content; }
+      }
+      @else if $scope == map_get($scopes, down) {
+        @media only screen and (max-width: ($value)px) { @content; }
+      }
+      @else {
+        @media only screen and (min-width: ($value)px) { @content; }
+      }
+
+      $prev-value: $value + 1;
+    }
+  }
+}
+

@@ -1,0 +1,110 @@
+@import "variables";
+
+@function calculateFontSize($size) {
+  @return $size * 100;
+}
+
+@font-face {
+  font-family: 'Futwora Pro';
+  font-weight: bold;
+  src: url('./Fonts/FutworaProTrial-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Futwora Pro';
+  font-weight: bold;
+  font-style: italic, oblique;
+  src: url('./Fonts/FutworaProTrial-BoldOblique.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Futwora Pro';
+  font-weight: 600;
+  src: url('./Fonts/FutworaProTrial-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Futwora Pro';
+  src: url('./Fonts/FutworaProTrial-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Futwora Pro';
+  font-style: italic, oblique;
+  src: url('./Fonts/FutworaProTrial-Oblique.otf') format('opentype');
+}
+
+h1, h2, h3, h4, h5, h6, span, a, p, button {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Futwora Pro", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+h1, .h1 {
+  font-size: calculateFontSize(map_get($sizes, gigantic));
+}
+
+h2, .h2 {
+  font-size: calculateFontSize(map_get($sizes, huge));
+}
+
+h3, .h3 {
+  font-size: calculateFontSize(map_get($sizes, large));
+}
+
+h4, .h4 {
+  font-size: calculateFontSize(map_get($sizes, medium));
+}
+
+h5, .h5 {
+  font-size: calculateFontSize(map_get($sizes, small));
+}
+
+h6, .h6 {
+  font-size: calculateFontSize(map_get($sizes, tiny));
+}
+
+a, p, span, button {
+  font-family: "Futwora Pro", sans-serif;
+  line-height: 1;
+  font-size: calculateFontSize(map_get($sizes, tiny))
+}
+
+.text {
+  font-family: "Futwora Pro", sans-serif;
+
+  &--bold {
+    font-weight: bold;
+  }
+
+  &--bold-italic {
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  &--medium {
+    font-weight: 600;
+  }
+
+  &--italic {
+    font-style: italic;
+  }
+
+  &--black {
+    color: map_get($colors, black);
+  }
+
+  &--blue {
+    color: map_get($colors, blue);
+  }
+
+  &--white {
+    color: map_get($colors, white);
+  }
+}
