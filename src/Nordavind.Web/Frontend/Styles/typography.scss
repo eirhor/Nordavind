@@ -1,37 +1,39 @@
-@import "variables";
+@import "../Core/variables";
 
 @function calculateFontSize($size) {
   @return $size * 100%;
 }
 
+$fontsPath: '../Core/Fonts/';
+
 @font-face {
   font-family: 'Futwora Pro';
   font-weight: bold;
-  src: url('./Fonts/FutworaProTrial-Bold.otf') format('opentype');
+  src: url($fontsPath + 'FutworaProTrial-Bold.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Futwora Pro';
   font-weight: bold;
   font-style: italic, oblique;
-  src: url('./Fonts/FutworaProTrial-BoldOblique.otf') format('opentype');
+  src: url($fontsPath + 'FutworaProTrial-BoldOblique.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Futwora Pro';
   font-weight: 600;
-  src: url('./Fonts/FutworaProTrial-Medium.otf') format('opentype');
+  src: url($fontsPath + 'FutworaProTrial-Medium.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Futwora Pro';
-  src: url('./Fonts/FutworaProTrial-Regular.otf') format('opentype');
+  src: url($fontsPath + 'FutworaProTrial-Regular.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Futwora Pro';
   font-style: italic, oblique;
-  src: url('./Fonts/FutworaProTrial-Oblique.otf') format('opentype');
+  src: url($fontsPath + 'FutworaProTrial-Oblique.otf') format('opentype');
 }
 
 h1, h2, h3, h4, h5, h6, span, a, p, button {

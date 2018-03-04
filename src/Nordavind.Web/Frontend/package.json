@@ -49,6 +49,7 @@
     "expose-loader": "^0.7.4",
     "jest": "^22.4.2",
     "node-sass": "^4.7.2",
+    "null-loader": "^0.1.1",
     "postcss-loader": "^2.1.1",
     "postcss-pxtorem": "^4.0.1",
     "postcss-sassy-import": "^1.2.3",

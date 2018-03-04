@@ -10,7 +10,7 @@ module.exports = (baseConfig, env) => {
     });
 
     config.module.rules.push({
-        test: /\.s?css$/,
+        test: /\.scss$/,
         loader: [{
                 loader: 'style-loader'
             },
@@ -39,7 +39,16 @@ module.exports = (baseConfig, env) => {
         loader: require.resolve("markdown-loader")
     });
 
+    config.module.rules.push({
+        test: /\normalize.css$/,
+        loader: 'null-loader'
+    })
+
     config.resolve.extensions.push(".ts", ".tsx");
+
+    config.node = {
+        fs: "empty"
+    }
 
     return config;
 };
