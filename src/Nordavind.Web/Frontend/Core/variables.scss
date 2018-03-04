@@ -36,3 +36,13 @@ $aspects: (
   tall: 2,
   skyscraper: 4,
 );
+
+$speeds: (
+  fast: 0.33s,
+  normal: 0.5s,
+  slow: 0.66s
+);
+
+* {
+  box-sizing: border-box;
+}

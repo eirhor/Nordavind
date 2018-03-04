@@ -1,0 +1,34 @@
+@import "../Core/breakpoints";
+
+@mixin buildGrid($columns) {
+  $invertedCounter: $columns;
+
+  @while $invertedCounter > 0 {
+    .small-#{$invertedCounter} {
+      width: percentage($invertedCounter/$columns);
+    }
+    .medium-#{$invertedCounter} {
+      @include breakpoint(medium) {
+        width: percentage($invertedCounter/$columns);
+      }
+    }
+    .large-#{$invertedCounter} {
+      @include breakpoint(large) {
+        width: percentage($invertedCounter/$columns);
+      }
+    }
+
+    $invertedCounter: $invertedCounter - 1;
+  }
+}
+
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.cell {
+  display: flex;
+}
+
+@include buildGrid(12);

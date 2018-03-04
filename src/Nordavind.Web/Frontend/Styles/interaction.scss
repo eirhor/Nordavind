@@ -1,3 +1,31 @@
-.interaction {
+@import "icons";
 
+.interaction {
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  background-color: map_get($colors, black);
+  transition: background-color map_get($speeds, fast);
+
+  &:hover {
+    background-color: map_get($colors, blue);
+  }
+
+  .icon {
+    width: 100%;
+    height: 100%;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: map_get($sizes, gigantic) * 100%;
+      transition: color map_get($speeds, fast);
+    }
+
+    &:hover:before {
+      color: map_get($colors, black);
+    }
+  }
 }
