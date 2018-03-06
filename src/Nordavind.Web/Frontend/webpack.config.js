@@ -14,7 +14,7 @@ module.exports = {
     entry: entry,
     output: output,
     resolve: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx', scss],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', 'scss'],
         modules: ['node_modules']
     },
     module: {
