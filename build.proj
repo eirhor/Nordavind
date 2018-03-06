@@ -23,6 +23,6 @@
     
     <Target Name="Build" DependsOnTargets="RestorePackages">
         <Exec WorkingDirectory="src/Nordavind.Web/Frontend" Command="npm run build:prod" />
-        <MSBuild Projects="$(SolutionFile)" Targets="Rebuild" Properties="Configuration=Release;Platform=Any" />
+        <MSBuild Projects="$(SolutionFile)" Targets="Rebuild" Properties="Configuration=Release;Platform=Any CPU" />
     </Target>
 </Project>  
