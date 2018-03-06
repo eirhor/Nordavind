@@ -4,6 +4,7 @@ install:
   - set PATH=%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\;%PATH%
   - ps: Install-Product node 8
   - npm install --global npm
+  - npm install --global typescript
   
 build: 
   project: build.proj
