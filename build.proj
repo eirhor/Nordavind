@@ -13,8 +13,8 @@
     </Target>
     
     <Target Name="Clean" BeforeTargets="Build">
-        <DeleteTree Directories="src/artifacts" />
-        <DeleteTree Directories="src/%(PackageAssemblies.Identity)/bin" />
+        <RemoveDir Directories="src/artifacts" />
+        <RemoveDir Directories="src/%(PackageAssemblies.Identity)/bin" />
     </Target>
     
     <Target Name="Test" DependsOnTargets="Build">
