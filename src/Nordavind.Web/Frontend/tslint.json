@@ -17,6 +17,7 @@
     "no-trailing-whitespace": [false],
     "no-shadowed-variable": false,
     "no-empty": false,
-    "no-var-requires": false
+    "no-var-requires": false,
+    "array-type": false
   }
 }

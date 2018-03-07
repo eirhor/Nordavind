@@ -1,0 +1,18 @@
+@import "../Core/variables";
+
+.navigation-item {
+  display: flex;
+
+  &:last-child {
+    .navigation-item__link {
+      padding: map_get($spacing, tiny) * 100px 0;
+    }
+  }
+
+  &__link {
+    padding: map_get($spacing, tiny) * 100px 0 0;
+    color: map_get($colors, white);
+    text-decoration: none;
+    font-size: map_get($sizes, small) * 100%;
+  }
+}
