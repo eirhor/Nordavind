@@ -6,6 +6,7 @@ export interface ICardPresentation {
     children?: React.ReactNode;
     ImageStyle: React.CSSProperties;
     Name: string;
+    NickName: string;
     ClassName?: string;
 }
 
@@ -13,6 +14,7 @@ export const cardPresentationDefaultProps: ICardPresentation = {
     ClassName: '',
     ImageStyle: { backgroundImage: `url(https://developmentseed.org/images/team/avatar-placeholder.png)`},
     Name: 'Ola Nordmann',
+    NickName: 'Typen',
 }
 
 export const CardPresentation = (props = cardPresentationDefaultProps) => (
@@ -23,6 +25,7 @@ export const CardPresentation = (props = cardPresentationDefaultProps) => (
                 {props.children}
             </div>
         </div>
-        <h4 className="card__text">{props.Name}</h4>
+        <h3 className="card__nick">{props.NickName}</h3>
+        <h4 className="card__text text--blue">{props.Name}</h4>
     </article>
 );
