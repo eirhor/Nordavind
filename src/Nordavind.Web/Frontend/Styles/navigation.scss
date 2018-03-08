@@ -25,11 +25,8 @@
     flex-flow: column nowrap;
     justify-content: center;
     height: 100%;
-    width: 80%;
-
-    @include breakpoint(large) {
-      width: 40%;
-    }
+    width: auto;
+    max-width: 80%;
   }
 
   &__logo {
@@ -65,6 +62,7 @@
       justify-content: space-around;
       width: 60%;
       top: 0;
+      opacity: 1;
     }
 
     &--show {
