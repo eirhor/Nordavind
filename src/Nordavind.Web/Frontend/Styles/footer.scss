@@ -1,0 +1,88 @@
+@import '../Core/variables';
+@import '../Core/breakpoints';
+
+.footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: map_get($spacing, large) * 10px;
+  width: 100%;
+  height: 120px;
+  background-color: map_get($colors, black);
+
+  @include breakpoint(large) {
+    height: 80px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: map_get($breakpoints, large) + 0px;
+    width: 100%;
+    height: 100%;
+
+    @include breakpoint(large) {
+      flex-flow: row nowrap;
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 100%;
+
+    @include breakpoint(large) {
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+    }
+
+    > .grid {
+      padding-top: map_get($spacing, medium) * 10px;
+      max-width: 350px;
+      width: 100%;
+
+      @include breakpoint(large) {
+        max-width: 250px;
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__connect {
+    display: none;
+
+    @include breakpoint(large) {
+      display: flex;
+      padding-right: map_get($spacing, large) * 10px;
+      color: darken(map_get($colors, white), 40%);
+    }
+  }
+
+  &__interaction {
+    > i.icon:before {
+      font-size: map_get($sizes, large) * 100%;
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding-top: map_get($spacing, medium) * 10px;
+
+    @include breakpoint(large) {
+      padding-top: 0;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    text-align: center;
+    font-size: map_get($sizes, tiny) * 100%;
+    color: darken(map_get($colors, white), 40%);
+    white-space: nowrap;
+  }
+}
