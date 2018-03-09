@@ -75,7 +75,7 @@ h6, .h6 {
 a, p, span, button {
   font-family: "Futwora Pro", sans-serif;
   line-height: 1;
-  font-size: calculateFontSize(map_get($sizes, tiny))
+  font-size: calculateFontSize(map_get($sizes, small))
 }
 
 .text {

@@ -2,15 +2,15 @@ import { text, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import * as React from 'react';
 import { host } from 'storybook-host';
-import { BannerPresentation, bannerPresentationDefaultProps } from '../Presentations/banner.presentation';
+import { ButtonPresentation, buttonPresentationDefaultProps } from '../Presentations/button.presentation';
 
-storiesOf('Banner', module)
+storiesOf('Button', module)
     .addDecorator(withKnobs)
     .addDecorator(host({
         align: 'center top',
-        height: '100%',
-        width: '100%',
+        height: 100,
+        width: 200,
     }))
     .add('Default', () => (
-        <BannerPresentation ImageUrl={text('Image URL', bannerPresentationDefaultProps.ImageUrl)} />
+        <ButtonPresentation Text={text('Button text', buttonPresentationDefaultProps.Text)}/>
     ));

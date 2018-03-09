@@ -21,11 +21,6 @@
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: map_get($sizes, gigantic) * 100%;
-      transition: color map_get($speeds, fast);
-    }
-
-    &:hover:before {
-      color: map_get($colors, black);
     }
   }
 }
