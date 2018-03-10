@@ -1,0 +1,5 @@
+---
+engines:
+  robocop:
+    enabled: true
+    base_sub_sidr: src/Nordavind.Web
