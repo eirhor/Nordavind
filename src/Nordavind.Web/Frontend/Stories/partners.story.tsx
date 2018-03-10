@@ -25,6 +25,17 @@ const getCarouselSettings = () => {
     return duplicate;
 };
 
+export const PartnersStory = () => (
+    <PartnersPresentation {...partnersPresentationDefaultProps} CarouselSettings={getCarouselSettings()} MainImageUrl={text('Main partner image url', partnersPresentationDefaultProps.MainImageUrl)}>
+        <CarouselImagePresentation {...carouselImagePresentationDefaultProps} ImageUrl={text('Carousel partner 1', carouselImagePresentationDefaultProps.ImageUrl)}/>
+        <CarouselImagePresentation {...carouselImagePresentationDefaultProps} ImageUrl={text('Carousel partner 2', carouselImagePresentationDefaultProps.ImageUrl)}/>
+        <CarouselImagePresentation {...carouselImagePresentationDefaultProps} ImageUrl={text('Carousel partner 3', carouselImagePresentationDefaultProps.ImageUrl)}/>
+        <CarouselImagePresentation {...carouselImagePresentationDefaultProps} ImageUrl={text('Carousel partner 4', carouselImagePresentationDefaultProps.ImageUrl)}/>
+        <CarouselImagePresentation {...carouselImagePresentationDefaultProps} ImageUrl={text('Carousel partner 5', carouselImagePresentationDefaultProps.ImageUrl)}/>
+        <CarouselImagePresentation {...carouselImagePresentationDefaultProps} ImageUrl={text('Carousel partner 6', carouselImagePresentationDefaultProps.ImageUrl)}/>
+    </PartnersPresentation>
+);
+
 storiesOf('Partners', module)
     .addDecorator(withKnobs)
     .addDecorator(host({
@@ -32,13 +43,4 @@ storiesOf('Partners', module)
         width: '100%',
         height: 300,
     }))
-    .add('Default', () => (
-        <PartnersPresentation {...partnersPresentationDefaultProps} CarouselSettings={getCarouselSettings()} MainImageUrl={text('Main partner image url', partnersPresentationDefaultProps.MainImageUrl)}>
-            <CarouselImagePresentation {...carouselImagePresentationDefaultProps} ImageUrl={text('Carousel partner 1', carouselImagePresentationDefaultProps.ImageUrl)}/>
-            <CarouselImagePresentation {...carouselImagePresentationDefaultProps} ImageUrl={text('Carousel partner 2', carouselImagePresentationDefaultProps.ImageUrl)}/>
-            <CarouselImagePresentation {...carouselImagePresentationDefaultProps} ImageUrl={text('Carousel partner 3', carouselImagePresentationDefaultProps.ImageUrl)}/>
-            <CarouselImagePresentation {...carouselImagePresentationDefaultProps} ImageUrl={text('Carousel partner 4', carouselImagePresentationDefaultProps.ImageUrl)}/>
-            <CarouselImagePresentation {...carouselImagePresentationDefaultProps} ImageUrl={text('Carousel partner 5', carouselImagePresentationDefaultProps.ImageUrl)}/>
-            <CarouselImagePresentation {...carouselImagePresentationDefaultProps} ImageUrl={text('Carousel partner 6', carouselImagePresentationDefaultProps.ImageUrl)}/>
-        </PartnersPresentation>
-    ));
+    .add('Default', () => <PartnersStory />);

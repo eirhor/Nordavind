@@ -4,6 +4,10 @@ import * as React from 'react';
 import { host } from 'storybook-host';
 import { ButtonPresentation, buttonPresentationDefaultProps } from '../Presentations/button.presentation';
 
+export const ButtonStory = () => (
+    <ButtonPresentation Text={text('Button text', buttonPresentationDefaultProps.Text)}/>
+);
+
 storiesOf('Button', module)
     .addDecorator(withKnobs)
     .addDecorator(host({
@@ -11,6 +15,4 @@ storiesOf('Button', module)
         height: 100,
         width: 200,
     }))
-    .add('Default', () => (
-        <ButtonPresentation Text={text('Button text', buttonPresentationDefaultProps.Text)}/>
-    ));
+    .add('Default', () => <ButtonStory />);

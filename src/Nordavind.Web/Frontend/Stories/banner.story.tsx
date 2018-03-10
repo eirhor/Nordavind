@@ -4,6 +4,10 @@ import * as React from 'react';
 import { host } from 'storybook-host';
 import { BannerPresentation, bannerPresentationDefaultProps } from '../Presentations/banner.presentation';
 
+export const BannerStory = () => (
+    <BannerPresentation ImageUrl={text('Image URL', bannerPresentationDefaultProps.ImageUrl)} />
+);
+
 storiesOf('Banner', module)
     .addDecorator(withKnobs)
     .addDecorator(host({
@@ -11,6 +15,4 @@ storiesOf('Banner', module)
         height: '100%',
         width: '100%',
     }))
-    .add('Default', () => (
-        <BannerPresentation ImageUrl={text('Image URL', bannerPresentationDefaultProps.ImageUrl)} />
-    ));
+    .add('Default', () => <BannerStory />);

@@ -24,6 +24,16 @@ const renderCard = () => (
     </React.Fragment>
 );
 
+export const StaffStory = () => (
+    <StaffPresentation Heading={text('Heading', staffPresentationDefaultProps.Heading)}>
+        {renderCard()}
+        {renderCard()}
+        {renderCard()}
+        {renderCard()}
+        {renderCard()}
+    </StaffPresentation>
+);
+
 storiesOf('Staff', module)
     .addDecorator(withKnobs)
     .addDecorator(host({
@@ -31,12 +41,4 @@ storiesOf('Staff', module)
         width: '100%',
         height: '100%',
     }))
-    .add('Default', () => (
-        <StaffPresentation Heading={text('Heading', staffPresentationDefaultProps.Heading)}>
-            {renderCard()}
-            {renderCard()}
-            {renderCard()}
-            {renderCard()}
-            {renderCard()}
-        </StaffPresentation>
-    ));
+    .add('Default', () => <StaffStory />);

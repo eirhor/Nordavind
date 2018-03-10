@@ -5,6 +5,15 @@ import { host } from 'storybook-host';
 import {CardPresentation, cardPresentationDefaultProps} from '../Presentations/card.presentation';
 import {InteractionPresentation} from '../Presentations/interaction.presentation';
 
+export const CardStory = () => (
+    <CardPresentation {...cardPresentationDefaultProps}>
+        <InteractionPresentation ClassName="small-3 card__interaction" IconClassName="icon--facebook icon--white" Link="#"/>
+        <InteractionPresentation ClassName="small-3 card__interaction" IconClassName="icon--twitter icon--white" Link="#"/>
+        <InteractionPresentation ClassName="small-3 card__interaction" IconClassName="icon--twitch icon--white" Link="#"/>
+        <InteractionPresentation ClassName="small-3 card__interaction" IconClassName="icon--instagram icon--white" Link="#"/>
+    </CardPresentation>
+);
+
 storiesOf('Card', module)
     .addDecorator(withKnobs)
     .addDecorator(host({
@@ -12,11 +21,4 @@ storiesOf('Card', module)
         height: 500,
         width: 380,
     }))
-    .add('Default', () => (
-        <CardPresentation {...cardPresentationDefaultProps}>
-            <InteractionPresentation ClassName="small-3 card__interaction" IconClassName="icon--facebook icon--white" Link="#"/>
-            <InteractionPresentation ClassName="small-3 card__interaction" IconClassName="icon--twitter icon--white" Link="#"/>
-            <InteractionPresentation ClassName="small-3 card__interaction" IconClassName="icon--twitch icon--white" Link="#"/>
-            <InteractionPresentation ClassName="small-3 card__interaction" IconClassName="icon--instagram icon--white" Link="#"/>
-        </CardPresentation>
-    ));
+    .add('Default', () => <CardStory />);

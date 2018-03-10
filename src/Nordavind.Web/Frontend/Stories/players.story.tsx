@@ -35,6 +35,16 @@ const renderCard = () => (
     </React.Fragment>
 );
 
+export const PlayersStory = () => (
+    <PlayersPresentation Heading={text('Heading', playersPresentationDefaultProps.Heading)} Buttons={renderButtons()}>
+        {renderCard()}
+        {renderCard()}
+        {renderCard()}
+        {renderCard()}
+        {renderCard()}
+    </PlayersPresentation>
+);
+
 storiesOf('Players', module)
     .addDecorator(withKnobs)
     .addDecorator(host({
@@ -42,12 +52,4 @@ storiesOf('Players', module)
         width: '100%',
         height: '100%',
     }))
-    .add('Default', () => (
-        <PlayersPresentation Heading={text('Heading', playersPresentationDefaultProps.Heading)} Buttons={renderButtons()}>
-            {renderCard()}
-            {renderCard()}
-            {renderCard()}
-            {renderCard()}
-            {renderCard()}
-        </PlayersPresentation>
-    ));
+    .add('Default', () => <PlayersStory />);
