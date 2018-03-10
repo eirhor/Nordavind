@@ -2,4 +2,4 @@
 engines:
   robocop:
     enabled: true
-    base_sub_sidr: src/Nordavind.Web
+    base_sub_dir: src/Nordavind.Web
