@@ -1,0 +1,63 @@
+@import '../Core/variables';
+@import '../Core/breakpoints';
+
+.staff {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    max-width: map_get($breakpoints, large) + 0px;
+    width: 100%;
+  }
+
+  &__heading {
+    display: block;
+    text-align: center;
+  }
+
+  &__cards {
+    justify-content: center;
+
+    > .card {
+      padding-top: map_get($spacing, medium) * 10px;
+
+      @include breakpoint(medium) {
+        padding-top: 0;
+        padding-right: map_get($spacing, medium) * 10px;
+
+        &:nth-child(2n) {
+          padding-right: 0;
+        }
+
+        &:nth-child(n+3) {
+          padding-top: map_get($spacing, medium) * 10px;
+        }
+      }
+
+      @include breakpoint(large) {
+        padding-right: map_get($spacing, large) * 10px;
+
+        &:nth-child(2n) {
+          padding-right: map_get($spacing, large) * 10px;
+        }
+
+        &:nth-child(3) {
+          padding-top: 0;
+        }
+
+        &:nth-child(3n) {
+          padding-right: 0;
+        }
+
+        &:nth-child(n+4) {
+          padding-top: map_get($spacing, large) * 10px;
+        }
+      }
+    }
+  }
+}

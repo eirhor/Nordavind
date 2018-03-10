@@ -1,0 +1,50 @@
+@import 'staff';
+
+.players {
+  @extend .staff;
+
+  &__wrapper {
+    @extend .staff__wrapper;
+  }
+
+  &__heading {
+    @extend .staff__heading;
+  }
+
+  &__cards {
+    @extend .staff__cards;
+  }
+
+  &__teams {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-bottom: map_get($spacing, medium) * 10px;
+
+    @include breakpoint(large) {
+      padding-bottom: map_get($spacing, large) * 10px;
+    }
+  }
+
+  &__button {
+    margin-right: map_get($spacing, medium) * 10px;
+
+    &:nth-child(n+3) {
+      margin-top: map_get($spacing, medium) * 10px;
+    }
+
+    @include breakpoint(medium) {
+      &:nth-child(n+3) {
+        margin-top: 0;
+      }
+    }
+
+    @include breakpoint(large) {
+      margin-right: map_get($spacing, large) * 10px;
+    }
+
+    &--active {
+      background-color: map_get($colors, blue);
+    }
+  }
+}

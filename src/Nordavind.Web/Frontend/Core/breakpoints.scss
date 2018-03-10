@@ -18,11 +18,11 @@ $scopes: (
         @media only screen and (max-width: $value + 0px) { @content; }
       }
       @else {
-        @media only screen and (min-width: $value + 0px) { @content; }
+        @media only screen and (min-width: $prev-value + 0px) { @content; }
       }
-
-      $prev-value: $value + 1;
     }
+
+    $prev-value: $value + 1;
   }
 }
 
