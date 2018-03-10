@@ -15,7 +15,7 @@ const getSliderAmount = () => {
     }
 
     return 2;
-}
+};
 
 const getCarouselSettings = () => {
     const duplicate = partnersPresentationDefaultProps.CarouselSettings;
@@ -23,7 +23,7 @@ const getCarouselSettings = () => {
     duplicate.slidesToShow = getSliderAmount();
 
     return duplicate;
-}
+};
 
 storiesOf('Partners', module)
     .addDecorator(withKnobs)

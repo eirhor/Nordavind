@@ -5,7 +5,7 @@ import '../Styles/typography.scss';
 
 const getAlphabet = () => {
     return 'A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z  Æ  Ø  Å';
-}
+};
 
 interface ISpacerProps {
     Text: string;
@@ -14,13 +14,13 @@ interface ISpacerProps {
 const spacerStyle: React.CSSProperties = {
     backgroundColor: '#000000',
     padding: '20px',
-}
+};
 
 const Spacer = (props: ISpacerProps) => (
     <h1 className="text--blue" style={spacerStyle}>
         {props.Text}
     </h1>
-)
+);
 
 storiesOf('Typography', module)
     .addDecorator(withKnobs)

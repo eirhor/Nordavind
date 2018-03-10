@@ -15,7 +15,7 @@ export const cardPresentationDefaultProps: ICardPresentation = {
     ImageStyle: { backgroundImage: `url(https://developmentseed.org/images/team/avatar-placeholder.png)`},
     Name: 'Ola Nordmann',
     NickName: 'Typen',
-}
+};
 
 export const CardPresentation = (props = cardPresentationDefaultProps) => (
     <article className={`card ${props.ClassName}`}>

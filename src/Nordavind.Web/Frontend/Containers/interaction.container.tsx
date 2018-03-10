@@ -32,7 +32,6 @@ export const interactionContainerDefaultProps: IIinteractionContainerProps = {
 
 export class InteractionContainer extends React.Component<IIinteractionContainerProps, any> {
     public static defaultProps = interactionContainerDefaultProps;
-    
     public render() {
         return (
             <InteractionPresentation IconClassName={this.getIconClassName()} Link={this.getLink()}/>

@@ -19,4 +19,4 @@ storiesOf('Footer', module)
             <InteractionPresentation ClassName="small-3 footer__interaction" IconClassName="icon--twitch icon--white" Link="#"/>
             <InteractionPresentation ClassName="small-3 footer__interaction" IconClassName="icon--instagram icon--white" Link="#"/>
         </FooterPresentation>
-    ))
+    ));
