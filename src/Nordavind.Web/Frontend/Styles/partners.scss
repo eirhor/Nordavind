@@ -1,0 +1,61 @@
+@import '../Core/variables';
+@import '../Core/breakpoints';
+
+.partners {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 100%;
+  background-color: map_get($colors, black);
+  padding: map_get($spacing, large) * 10px;
+
+  @include breakpoint(medium) {
+    height: 200px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    max-width: map_get($breakpoints, large) + 0px;
+    width: 100%;
+    height: 100%;
+
+    @include breakpoint(large) {
+      flex-flow: row nowrap;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: auto;
+    padding-bottom: map_get($spacing, large) * 10px;
+
+    @include breakpoint(large) {
+      width: 33%;
+    }
+
+    > a {
+      display: block;
+      height: 100%;
+    }
+  }
+
+  &__mainimage {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+  }
+
+  &__carousel {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    @include breakpoint(large) {
+      width: 66%;
+    }
+  }
+}
